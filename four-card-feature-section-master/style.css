@@ -1,0 +1,167 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+body {
+    background-color: hsl(0, 16%, 92%);
+}
+
+.center-text {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#header-reliable {
+    font-weight: lighter;
+    margin-top: 2%;
+    font-size: 250%;
+    color: hsl(234, 12%, 34%);
+}
+
+#header-powered {
+    font-weight: 800;
+    margin-top: 0%;
+    font-size: 260%;
+    color: hsl(234, 12%, 34%);
+}
+
+#just-text {
+    width: 28%;
+    color: hsl(234, 12%, 34%);
+    opacity: 0.6;
+    margin-top: 1%;
+    font-size: 110%;
+}
+
+.box {
+    position: relative;
+    background-color: white;
+    width: 25vw;
+    height: 30vh;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 2vh gray;
+}
+
+#top-box {
+    margin: 0 auto;
+    margin-top: 3%;
+    border-top: 0.5vh solid hsl(0, 78%, 62%);
+}
+
+#left-box {
+    float: left;
+    margin-left: 11%;
+    transform: translate(0%, -45%);
+    border-top: 0.5vh solid hsl(180, 62%, 55%);
+}
+
+#right-box {
+    float: right;
+    margin-right: 11%;
+    transform: translate(0%, -45%);
+    border-top: 0.5vh solid hsl(212, 86%, 64%);
+}
+
+#bottom-box {
+    margin: 0 auto;
+    transform: translate(0%, 10%);
+    border-top: 0.5vh solid hsl(34, 97%, 64%);
+}
+
+.box-header {
+    font-size: 160%;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-weight: 900;
+    color: hsl(234, 12%, 34%);
+}
+
+.box-text {
+    margin-right: 10%;
+    margin-left: 10%;
+    font-size: 90%;
+    opacity: 0.6;
+    margin-top: 3%;
+}
+
+img {
+    float: right;
+    margin-right: 8%;
+    margin-top: 12%;
+}
+
+@media screen and (max-width: 600px) {
+    #header-reliable {
+        margin-top: 20%;
+        font-size: 155%;
+    }
+
+    #header-powered {
+        margin-top: 0%;
+        font-size: 162%;
+    }
+
+    #just-text {
+        width: 85%;
+        margin-top: 5%;
+        font-size: 100%;
+    }
+
+    body {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .box {
+        width: 90vw;
+        height: 50vh;
+        margin-top: 20%;
+    }
+
+    #top-box {
+        margin-top: 8%;
+        order: 2;
+    }
+
+    #left-box {
+        margin-left: 5vw;
+        transform: none;
+        order: 1;
+    }
+    
+    #right-box {
+        margin-left: 5vw;
+        order: 4;
+        transform: none;
+        margin-top: 8%;
+    }
+    
+    #bottom-box {
+        order: 3;
+        transform: none;
+        margin-top: 8%;
+    }
+
+    img {
+        margin-top: 20%;
+    }
+
+    footer {
+        order: 5;
+    }
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+footer {
+    margin-top: 7vh;
+}
