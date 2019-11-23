@@ -16,7 +16,7 @@ body {
 }
 
 #main-div {
-    width: 40vw;
+    width: 42vw;
     height: 60vh;
     background-color: white;
     margin: 0 auto;
@@ -48,7 +48,7 @@ body {
 #top-box-30day {
     color: hsl(71, 73%, 54%);
     font-size: 120%;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 3vh;
 }
 
@@ -67,11 +67,13 @@ body {
 #left-box {
     flex: 1;
     background-color: hsl(179, 62%, 43%);
+    border-bottom-left-radius: 10px;
 }
 
 #right-box {
     flex: 1;
     background-color: hsl(178, 61%, 59%);
+    border-bottom-right-radius: 10px;
 }
 
 .center-div-bottom-boxes {
@@ -107,7 +109,8 @@ body {
 }
 
 #left-box-signup {
-    margin: 4.5vh auto;
+    margin: 0 auto;
+    margin-top: 3vh;
     text-align: center;
     padding-top: 5%;
     border-radius: 5px;
@@ -130,4 +133,54 @@ body {
 
 footer {
     margin-top: 18vh;
+}
+
+@media screen and (max-width: 600px) {
+    * {
+        font-size: 13px;
+    }
+
+    #main-div {
+        width: 80vw;
+        border-radius: 5px;
+    }
+
+    #top-box-text {
+        line-height: 180%;
+        padding-right: 0;
+        font-size: 95%;
+    }
+
+    #bottom-box {
+        margin-top: 35%;
+        flex-flow: column;
+        height: 85vh;
+    }
+
+    .center-div-bottom-boxes, .center-div {
+        margin-left: 7%;
+        margin-right: 7%;
+        margin-bottom: 0px;
+    }
+
+    #left-box {
+        height: 100%;
+        border-radius: 0;
+    }
+
+    #left-box-signup {
+        height: 8vh;
+        margin-top: 15%;
+    }
+
+    #right-box {
+        height: 100%;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    footer {
+        margin-top: 85vh;
+        margin-bottom: 2vh;
+    }
 }
