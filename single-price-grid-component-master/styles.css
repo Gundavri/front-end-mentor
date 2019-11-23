@@ -1,0 +1,133 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+}
+
+html, body {
+    width: 100vw;
+    height: 80vh;
+}
+
+body {
+    background-color: hsl(204, 43%, 93%);
+}
+
+#main-div {
+    width: 40vw;
+    height: 60vh;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 18vh;
+    border-radius: 10px;
+}
+
+#top-box {
+    height: 45%;
+}
+
+#bottom-box {
+    height: 55%;
+}
+
+.center-div {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 6%;
+}
+
+#top-box-join {
+    font-size: 170%;
+    font-weight: 600;
+    padding-top: 4vh;
+    color: hsl(179, 62%, 43%);
+}
+
+#top-box-30day {
+    color: hsl(71, 73%, 54%);
+    font-size: 120%;
+    font-weight: 400;
+    margin-top: 3vh;
+}
+
+#top-box-text {
+    padding-right: 15%;
+    margin-top: 2vh;
+    color: hsl(218, 22%, 67%);
+    font-size: 105%;
+}
+
+#bottom-box {
+    display: flex;
+    color: white;
+}
+
+#left-box {
+    flex: 1;
+    background-color: hsl(179, 62%, 43%);
+}
+
+#right-box {
+    flex: 1;
+    background-color: hsl(178, 61%, 59%);
+}
+
+.center-div-bottom-boxes {
+    margin: 5vh 2.5vw;
+}
+
+.left-box-monthly {
+    font-size: 120%;
+    font-weight: 600;
+}
+
+#left-box-29 {
+    margin-top: 3vh;
+    display: flex;
+}
+
+#left-box-29d {
+    font-size: 200%;
+    font-weight: 600;
+    flex: 1;
+}
+
+#left-box-per-month {
+    margin-left: 5%;
+    margin-top: 0.8vh;
+    font-weight: 100;
+    opacity: 0.6;
+    flex: 4;
+}
+
+#left-box-full {
+    margin-top: 1.5vh;
+}
+
+#left-box-signup {
+    margin: 4.5vh auto;
+    text-align: center;
+    padding-top: 5%;
+    border-radius: 5px;
+    background-color: hsl(71, 73%, 54%); 
+    height: 5vh;
+    font-weight: 600;
+    font-size: 105%;
+}
+
+#right-box-list {
+    margin-top: 12%;
+    list-style: none;
+}
+
+#right-box-list li {
+    margin-bottom: 2%;
+    font-weight: 100;
+    font-size: 95%;
+}
+
+footer {
+    margin-top: 18vh;
+}
