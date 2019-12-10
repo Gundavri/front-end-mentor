@@ -1,0 +1,163 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#header {
+    height: 16vh;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+}
+
+#header-logo-div {
+    flex: 4;
+    margin: auto 0%;
+    padding-left: 6.2%;
+}
+
+#header-logo-div img {
+    width: 8vw;
+}
+
+#navbar {
+    margin: auto 1vw;
+    flex: 2;
+    display: flex;
+    padding-left: 35vw;
+}
+
+#navbar p {
+    justify-content: space-between;
+    margin-left: 2.5vw;
+    color: hsl(243, 87%, 12%);
+    font-weight: 400;
+    font-size: 90%;
+}
+
+#wrapper1 {
+    height: 72vh;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#wrapper1-left {
+    float: left;
+    width: 50%
+}
+
+#wrapper1-header {
+    padding: 0 12%;
+    margin-top: 12%;
+    font-weight: 900;
+    font-size: 180%;
+    color:  hsl(243, 87%, 12%);
+    letter-spacing: 0.05vw;
+    word-spacing: 0.18vw;
+    line-height: 160%;
+}
+
+.wrapper-text {
+    padding: 0 12%;
+    padding-right: 35%;
+    margin-top: 3%;
+    color:  hsl(243, 87%, 12%);
+    font-size: 90%;
+    font-weight: 400;
+}
+
+#wrapper1-input-button {
+    padding: 0 12%;
+    margin-top: 2%;
+    height: 5vh;
+}
+
+#wrapper1-input-button input {
+    width: 42%;
+    height: 68%;
+    border: solid 1px hsl(243, 87%, 12%);
+    border-radius: 3%;
+    padding-left: 15px;
+}
+
+::placeholder {
+    opacity: 0.5;
+    font-size: 85%;
+}
+
+#wrapper1-input-button button {
+    margin-left: 1%;
+    width: 25%;
+    height: 70%;
+    color: white;
+    background-color: hsl(224, 93%, 58%);
+    border: 0px;
+    border-radius: 4%;
+    font-weight: 900;
+    font-size: 72%;
+}
+
+#wrapper1-right {
+    float: right;
+    width: 45%;
+}
+
+#wrapper1-right img {
+    width: 100%;
+}
+
+#wrapper2 {
+    font-family: 'Open Sans', sans-serif;
+    margin-top: -0.5%;
+    height: 88vh;
+    width: 100%;
+    background-color: #F8F8FE;
+    padding-left: 6%;
+    padding-top: 5%;
+}
+
+#wrapper2-img {
+    width: 100%;
+}
+
+#wrapper2-left {
+    float: left;
+    width: 50%;
+}
+
+#wrapper2-right {
+    float: right;
+    width: 45%;
+}
+
+#wrapper2-right img{
+    margin-top: 5%;
+    width: 100%;
+}
+
+
+#wrapper2-header {
+    font-weight: 900;
+    font-size: 180%;
+    color:  hsl(243, 87%, 12%);
+    letter-spacing: 0.06vw;
+    word-spacing: 0.2vw;
+    line-height: 160%;
+}
+
+.wrapper2-text {
+    padding-right: 45%;
+    margin-top: 3%;
+    color:  hsl(243, 87%, 12%);
+    font-size: 90%;
+    font-weight: 400;
+}
+
+#wrapper2-link-div {
+    margin-top: 2%;
+    text-decoration: underline;
+}
+
+#wrapper2-link {
+    color: hsl(170, 45%, 43%);
+}
+
