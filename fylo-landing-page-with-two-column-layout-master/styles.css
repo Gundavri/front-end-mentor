@@ -2,11 +2,16 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+html, body {
+    height: 100%;
 }
 
 #header {
     height: 16vh;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     display: flex;
 }
 
@@ -37,7 +42,6 @@
 
 #wrapper1 {
     height: 72vh;
-    font-family: 'Open Sans', sans-serif;
 }
 
 #wrapper1-left {
@@ -106,7 +110,6 @@
 }
 
 #wrapper2 {
-    font-family: 'Open Sans', sans-serif;
     margin-top: -0.5%;
     height: 88vh;
     width: 100%;
@@ -122,6 +125,7 @@
 #wrapper2-left {
     float: left;
     width: 50%;
+    height: 100%;
 }
 
 #wrapper2-right {
@@ -153,11 +157,71 @@
 }
 
 #wrapper2-link-div {
+    text-decoration: none;
     margin-top: 2%;
-    text-decoration: underline;
+}
+
+#wrapper2-link-div a:link {
+    text-decoration: none;
+}
+
+#underline-div {
+    background-color:  hsl(170, 45%, 43%);
+    height: 1px;
+    width: 162px;
 }
 
 #wrapper2-link {
     color: hsl(170, 45%, 43%);
 }
 
+#article {
+    background-color: white;
+    height: 32%;
+    width: 45%;
+    margin-top: 5%;
+    border-radius: 2%;
+    box-shadow: 0px 0px 10px 5px gainsboro;
+    padding: 4%;
+    padding-right: 6%;
+}
+
+#article-img {
+    border-radius: 50%;
+    width: 13%;
+}
+
+#article-text {
+    margin-top: 3%;
+    font-weight: 500;
+    font-size: 89%;
+    color: hsl(243, 87%, 12%);
+    line-height: 190%;
+}
+
+#article-footer {
+    margin-top: 6%;
+}
+
+#article-img {
+    float: left;
+}
+
+#article-footer-text {
+    font-size: 80%;
+    line-height: 150%;
+    margin-left: 45px;
+}
+
+#article-footer-text p {
+    font-weight: 900;
+}
+
+#early-access {
+    height: 25%;
+    background-color: hsl(238, 22%, 44%);
+}
+
+#early-access-input-button {
+    float: right;
+}
