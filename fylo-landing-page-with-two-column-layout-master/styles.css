@@ -84,8 +84,8 @@ html, body {
 }
 
 ::placeholder {
-    opacity: 0.5;
-    font-size: 85%;
+    opacity: 0.6;
+    font-size: 88%;
 }
 
 #wrapper1-input-button button {
@@ -220,8 +220,240 @@ html, body {
 #early-access {
     height: 25%;
     background-color: hsl(238, 22%, 44%);
+    padding: 4% 5%;
+}
+
+#early-access-header {
+    color: white;
+    font-weight: 900;
+    font-size: 150%;
+    width: 40%;
+    margin: 0;
+}
+
+#early-access-text {
+    color: white;
+    margin-top: 1.5%;
+    font-weight: 400;
+    font-size: 85%;
+    width: 25%;
+    word-spacing: 3px;
+    margin-right: 0px;
 }
 
 #early-access-input-button {
     float: right;
+    margin-top: -4.5%;
+    margin-right: 15%;
+    height: 30%;
+}
+
+#early-access-input-button input {
+    display: block;
+    width: 250%;
+    height: 120%;
+    border-radius: 3%;
+    padding-left: 8%;
+    border: 0px;
+}
+
+#early-access-input-button button {
+    margin-top: 10%;
+    display: block;
+    width: 110%;
+    height: 120%;
+    color: white;
+    background-color: hsl(224, 93%, 58%);
+    border: 0px;
+    border-radius: 4%;
+    font-weight: 900;
+    font-size: 72%;
+}
+
+#footer {
+    background-color: hsl(243, 87%, 12%);
+    height: 35%;
+    color: white;
+    padding: 5% 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer-contact-logo {
+    display: flex;
+    flex-flow: column;
+}
+
+#footer-contact-logo:first-child{
+    width: 10%;
+}
+
+#footer-contact {
+    width: 150%;
+}
+
+#footer-contact p {
+    margin-top: 8%;
+    font-size: 90%;
+}
+
+#footer-contact p img {
+    width: 5%;
+    margin-right: 3%;
+}
+
+#footer-social {
+    margin-top: 7%;
+    margin-right: 5%;
+}
+
+#footer-social img {
+    width: 15px;
+}
+
+#footer-about-us ul, #footer-contact-us ul {
+    list-style: none;
+    margin-top: 150%;
+}
+
+#footer-about-us ul li, #footer-contact-us ul li {
+    margin-top: 15%;
+    font-size: 80%;
+    font-weight: 450;
+}
+
+
+.attribution {
+    background-color: hsl(243, 87%, 12%);
+    color: white;
+}
+
+@media screen and (max-width: 600px){
+
+    #header {
+        height: 14vh;
+    }
+
+    #header-logo-div {
+        flex: 1;
+    }
+
+    #header-logo-div img{
+        width: 100%;
+    }
+
+    #navbar {
+        padding: 0;
+        padding-left: 20%;
+        font-size: 90%;
+    }
+
+    #wrapper1 {
+        margin-top: 5%;
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+    }
+
+    #wrapper1-left {
+        float: none;
+        order: 2;
+        width: 100%;
+    }
+
+    #wrapper1-right {
+        float: none;
+        order: 1;
+        width: 100%;
+    }
+
+    #wrapper1-right img {
+        width: 100%;
+    }
+
+    #wrapper1-header {
+        width: 100%;
+        font-size: 140%;
+        text-align: center;
+        font-weight: 900;
+    }
+
+    .wrapper-text {
+        text-align: center;
+        width: 100%;
+        padding: 0;
+        padding: 12%;
+        margin-top: -5%;
+    }
+
+    #wrapper1-input-button {
+        display: flex;
+        flex-flow: column;
+        height: 25%;
+    }
+
+    #wrapper1-input-button input {
+        margin: 0 auto;
+        width: 95%;
+        height: 48%;
+    }
+
+    #wrapper1-input-button button {
+        margin: 4% auto;
+        width: 95%;
+        height: 48%;
+    }
+
+
+    #wrapper2 {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        padding: 0;
+        margin-top: -1%;
+    }
+
+    #wrapper2-left {
+        order: 2;
+        width: 100%;
+    }
+
+    #wrapper2-right {
+        width: 100%;
+        order: 1;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    #wrapper2-img {
+        margin-top: 75%;
+    }
+
+    #wrapper2-header {
+        margin-top: 15%;
+        width: 100%;
+        text-align: center;
+        font-size: 110%;
+        font-weight: bold;
+    }
+
+    .wrapper2-text {
+        padding: 1% 5%;
+        width: 100%;
+        text-align: left;
+        font-size: 90%;
+        opacity: 0.5;
+        font-weight: 600;
+    }
+
+    #wrapper2-link-div {
+        width: 100%;
+    }
+
+    #wrapper2-link-div:first-child {
+        display: block;
+        margin-left: 50px;
+    }
+
+
 }
