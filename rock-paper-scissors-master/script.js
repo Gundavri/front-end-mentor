@@ -1,7 +1,7 @@
 var modal = document.getElementsByClassName('modal')[0];
 var modalContent = document.getElementsByClassName('modal-content')[0];
 var modalCloseBtn = document.getElementsByClassName('close')[0];
-
+var rulesBtn = document.getElementsByClassName('rules')[0];
 
 
 function modalOpenFunc(){
@@ -20,7 +20,7 @@ function modalCloseFunc(){
     }, 300);
 }
 
-modalOpenFunc();
+// modalOpenFunc();
 
 modal.addEventListener('click', (event) => {
     if(event.target === modal) {
@@ -30,4 +30,8 @@ modal.addEventListener('click', (event) => {
 
 modalCloseBtn.addEventListener('click', (event) => {
     modalCloseFunc();
+});
+
+rulesBtn.addEventListener('click', (event) => {
+    modalOpenFunc();
 });

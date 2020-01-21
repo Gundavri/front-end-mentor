@@ -19,6 +19,10 @@ html, body {
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
+body {
+    background-image: radial-gradient(circle at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
 .modal {
     display: none;
     z-index: 1;
@@ -28,7 +32,7 @@ html, body {
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.3);
     transition: opacity 300ms ease-in-out;
 }
 
@@ -82,4 +86,204 @@ html, body {
     position: absolute;
     bottom: 0;
     margin: 0 auto;
+}
+
+.header {
+    height: 10%;
+    width: 45%;
+    margin: 4% auto;
+    border: solid 2px  hsl(217, 16%, 45%);
+    border-radius: 12px;
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    z-index: 1;
+}
+
+.options {
+    color: #fff;
+    font-weight: 800;
+    font-size: 2vw;
+}
+
+.score {
+    background-color: white;
+    width: 10vw;
+    height: 8vw;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    color: hsl(229, 25%, 31%);
+}
+
+.score-text {
+    font-size: 2vw;
+    font-weight: 700;
+}
+
+.score-num {
+    font-size: 5vw;
+    font-weight: 900;
+}
+
+.rules {
+    cursor: pointer;
+    position: absolute;
+    right: 3%;
+    bottom: 3%;
+    height: 4%;
+    width: 7%;
+    border: solid 1px #fff;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 1.1vw;
+}
+
+.wrapper {
+    width: 12vw;
+    height: 12vw;
+    position: relative;
+}
+
+.inner-img {
+    width: 42%;
+}
+
+.outer-border {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+}
+
+
+/* Styles for PAPER */
+.paper-outer-border {
+    background-image: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+}
+
+.paper-outer-border-thingie {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: hsl(233, 42%, 40%);
+    transform: translate(0, 5%);
+}
+
+.paper-inner-border {
+    position: absolute;
+    width: 77%;
+    height: 77%;
+    border-radius: 50%;
+    background-color: rgb(200, 200, 200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paper-inner-border-thingie {
+    background-color: rgb(160, 160, 160);
+    position: relative;
+    width: 77%;
+    height: 77%;
+    border-radius: 50%;
+    transform: translate(0, -5%);
+}
+
+
+/* Styles for SCISSORS */
+.scissors-outer-border {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+}
+
+.scissors-outer-border-thingie {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: hsl(233, 42%, 40%);
+    transform: translate(0, 5%);
+}
+
+.scissors-inner-border {
+    position: absolute;
+    width: 77%;
+    height: 77%;
+    border-radius: 50%;
+    background-color: rgb(200, 200, 200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scissors-inner-border-thingie {
+    background-color: rgb(160, 160, 160);
+    position: relative;
+    width: 77%;
+    height: 77%;
+    border-radius: 50%;
+    transform: translate(0, -5%);
+}
+
+
+/* Styles for ROCK */
+.rock-outer-border {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+}
+
+.rock-outer-border-thingie {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: hsl(233, 42%, 40%);
+    transform: translate(0, 5%);
+}
+
+.rock-inner-border {
+    position: absolute;
+    width: 77%;
+    height: 77%;
+    border-radius: 50%;
+    background-color: rgb(200, 200, 200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rock-inner-border-thingie {
+    background-color: rgb(160, 160, 160);
+    position: relative;
+    width: 77%;
+    height: 77%;
+    border-radius: 50%;
+    transform: translate(0, -5%);
 }
