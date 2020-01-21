@@ -1,2 +1,85 @@
-.attribution { font-size: 11px; text-align: center; }
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed&display=swap');
+
+.attribution { 
+    width: 100%;
+    margin: 0 auto; 
+    position: absolute; 
+    bottom: 0; 
+    font-size: 11px; 
+    text-align: center;
+}
 .attribution a { color: hsl(228, 45%, 44%); }
+
+html, body {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.modal {
+    display: none;
+    z-index: 1;
+    position: fixed;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: opacity 300ms ease-in-out;
+}
+
+.modal-content {
+    width: 25vw;
+    height: 25vw;
+    margin-top: 50vh;
+    margin-left: 50vw;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 4%;
+    padding: 5px 10px;
+}
+
+.close {
+    font-size: 120%;
+    float: right;
+    margin-right: 4%;
+    cursor: pointer;
+    color: hsl(217, 16%, 45%);
+}
+
+.close:hover {
+    color: hsl(229, 25%, 31%);
+}
+
+.modal-header {
+    margin-top: 3%;
+    margin-left: 4%;
+    height: 12%;
+    font-size: 2vw;
+}
+
+.modal-header p {
+    margin: 0;
+    transform: translate(0, 0.4vw);
+    color: hsl(229, 25%, 31%);
+    font-weight: 800;
+    width: 50%;
+}
+
+.modal-body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-body img {
+    height: 20vw;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+}
