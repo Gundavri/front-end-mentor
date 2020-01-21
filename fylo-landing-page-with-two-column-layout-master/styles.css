@@ -512,9 +512,44 @@ html, body {
         justify-content: flex-start;
         margin-top: 0;
         flex-flow: column;
-        height: 100%;
+        height: 85%;
         padding: 0;
     }
 
+    #footer-contact-us ul, #footer-about-us ul {
+        margin-top: 0;
+    }
+
+    #footer-contact-us ul li {
+        margin-top: 0;
+    }
+
+    #footer-social {
+        margin: 0;
+        text-align: center;
+    }
+
+    #footer-contact-logo:first-child {
+        width: 60%;
+        margin-top: 10%;
+    }
+
+    #footer-contact-logo{
+        margin: 0 10%;
+    }
+
+    #footer-contact-logo > img {
+        width: 60%;
+    }
+
+    #footer-about-us ul li, #footer-contact-us ul li {
+        margin-top: 4%;
+        font-size: 90%;
+    }
+
+    #footer-about-us, #footer-contact-us {
+        margin: 10% 10%;
+        width: 60%;
+    }
 
 }
