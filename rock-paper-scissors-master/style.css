@@ -333,4 +333,20 @@ body {
 
 #play-again {
     display: none;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+#play-again-btn {
+    cursor: pointer;
+    background-color: #C8C8C8;
+    width: 12vw;
+    height: 1.2vw;
+    border-radius: 7px;
+    font-weight: 700;
+    text-align: center;
+    padding: 0.8vw;
+    font-size: 1vw;
+    color: hsl(310, 76%, 32%);
 }

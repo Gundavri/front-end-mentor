@@ -7,9 +7,9 @@ var lines = document.getElementsByClassName('line');
 var playerChoice = document.getElementById('player-choice');
 var enemyChoice = document.getElementById('enemy-choice');
 var playAgain = document.getElementById('play-again');
+var playAgainBtn = document.getElementById('play-again-btn');
 var playerUnderneath = document.getElementById('player-underneath');
 var enemyUnderneath = document.getElementById('enemy-underneath');
-
 
 var signs = document.getElementsByClassName('wrapper');
 var paper = signs[0];
@@ -48,6 +48,10 @@ function scissorsCallback(event) {
 function rockCallback(event) {
     console.log(event);
     signClickedFunc('rock');
+}
+
+function playAgainCallback(event) {
+    console.log('blaaa');
 }
 
 // Logic
@@ -126,7 +130,24 @@ function drawEnemy(num){
     }
     
     enemyChoice.childNodes[0].style.display = 'block';
-    enemyChoice.childNodes[0].style.transform = 'translate(40%, 0)';
+    enemyChoice.childNodes[0].style.transform = 'translate(45%, 0)';
+}
+
+
+function drawMiddle(txt) {
+    playAgain.style.display = 'block';
+
+}
+
+
+function drawRes(num) {
+    if(num === 0) {
+        drawMiddle("TIE");
+    } else if(num === -1) {
+        drawMiddle("YOU LOSE");
+    } else if(num === 1) {
+        drawMiddle("YOU WIN");
+    }
 }
 
 
@@ -136,6 +157,7 @@ function signClickedFunc(sign){
     changeDisplaysWhenChosen();
     result = randomizeAndDraw(sign);
     drawEnemy(result.randNum);
+    drawRes(result.res);
 }
 
 // modalOpenFunc();
@@ -158,6 +180,7 @@ modalCloseBtn.addEventListener('click', modalCloseFunc);
 
 rulesBtn.addEventListener('click', modalOpenFunc);
 
+playAgainBtn.addEventListener('click', playAgainCallback)
 
 
 
