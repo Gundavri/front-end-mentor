@@ -2,11 +2,24 @@ var modal = document.getElementsByClassName('modal')[0];
 var modalContent = document.getElementsByClassName('modal-content')[0];
 var modalCloseBtn = document.getElementsByClassName('close')[0];
 var rulesBtn = document.getElementsByClassName('rules')[0];
+var textDivs = document.getElementsByClassName('selected-text');
+var lines = document.getElementsByClassName('line');
 
 var signs = document.getElementsByClassName('wrapper');
 var paper = signs[0];
 var scissors = signs[1];
 var rock = signs[2];
+
+function changeDisplaysWhenChosen(){
+    textDivs[0].style.display = 'block';
+    textDivs[1].style.display = 'block';
+    paper.style.display = 'none';
+    scissors.style.display = 'none';
+    rock.style.display = 'none';
+    for(let ln of lines){
+        ln.style.display = 'none';
+    }
+}
 
 
 function modalOpenFunc(){
@@ -27,6 +40,7 @@ function modalCloseFunc(){
 
 function signClickedFunc(sign){
     console.log(sign);
+    changeDisplaysWhenChosen();
 }
 
 // modalOpenFunc();
