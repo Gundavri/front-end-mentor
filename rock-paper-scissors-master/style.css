@@ -86,14 +86,14 @@ body {
     height: 20vw;
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     margin: 0 auto;
 }
 
 .header {
-    height: 10%;
+    height: 6vw;
     width: 45%;
-    margin: 4% auto;
+    margin: 1.2% auto;
     border: solid 2px  hsl(217, 16%, 45%);
     border-radius: 12px;
     padding: 2%;
@@ -105,7 +105,7 @@ body {
     z-index: 1;
 }
 
-.options {
+.signs-words {
     color: #fff;
     font-weight: 800;
     font-size: 2vw;
@@ -253,6 +253,39 @@ body {
     background-color: rgb(160, 160, 160);
 }
 
+/* Styles for SPOCK */
+.spock-outer-border {
+    background-image: linear-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+}
+
+.spock-outer-border-thingie {
+    background-color: hsl(188, 56%, 39%);
+}
+
+.spock-inner-border {
+    background-color: rgb(200, 200, 200);
+}
+
+.spock-inner-border-thingie {
+    background-color: rgb(160, 160, 160);
+}
+
+/* Styles for LIZARD */
+.lizard-outer-border {
+    background-image: linear-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+}
+
+.lizard-outer-border-thingie {
+    background-color: hsl(255, 68%, 35%);
+}
+
+.lizard-inner-border {
+    background-color: rgb(200, 200, 200);
+}
+
+.lizard-inner-border-thingie {
+    background-color: rgb(160, 160, 160);
+}
 
 
 .initial-row-1 {
@@ -333,9 +366,7 @@ body {
 
 #play-again {
     display: none;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
+    margin-top: 2%;
 }
 
 #play-again-btn {
@@ -349,4 +380,144 @@ body {
     padding: 0.8vw;
     font-size: 1vw;
     color: hsl(310, 76%, 32%);
+}
+
+#play-again-text {
+    font-size: 2vw;
+    font-weight: 800;
+    color: #C8C8C8;
+    margin: 2% auto;
+    text-align: center;
+}
+
+
+/* starting bonus */
+/* --------------------------- */
+
+
+.mode-switch {
+    cursor: pointer;
+    position: absolute;
+    right: 12%;
+    bottom: 3%;
+}
+
+.mode-switch-text {
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 1vw;
+    text-align: center;
+}
+
+input[type=checkbox]{
+	height: 0px;
+	width: 0;
+    visibility: hidden;
+    display: none;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 50px;
+	height: 20px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: #bada55;
+}
+
+input:checked + label:after {
+	left: 100%;
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 3vw;
+}
+
+
+.modal-body-image-bonus {
+    display: none !important;
+}
+
+.signs-words-bonus {
+    display: none;
+}
+
+.game-wrapper-choose-bonus {
+    display: none;
+}
+
+.initial-row-1-bonus {
+    margin-top: 12vw;
+}
+
+.wrapper-scissors-bonus {
+    transform: translateY(-10vw);
+}
+
+.wrapper-spock-bonus {
+    margin: 0;
+}
+
+.wrapper-paper-bonus {
+    margin: 0;
+}
+
+.wrapper-lizard-bonus {
+    margin: 0 4.5vw;
+}
+
+.wrapper-rock-bonus {
+    margin: 0 4.5vw;
+}
+
+.initial-row-2-bonus {
+    margin-top: 6vw;
+}
+
+.line-1 {
+    margin: -5vw 42.5vw;
+}
+
+.line-2 {
+    margin: -5vw 40.8vw;
+    transform-origin: left;
+    transform: rotate(-113deg);
+}
+
+.line-3 {
+    margin: -24vw 37vw;
+    transform-origin: left;
+    transform: rotate(-29deg);
+}
+
+.line-4 {
+    margin: -24vw 62.3vw;
+    transform-origin: left;
+    transform: rotate(-149deg)
+}
+
+.line-5 {
+    margin: -5vw 59.7vw;
+    transform-origin: left;
+    transform: rotate(-67deg);
 }
