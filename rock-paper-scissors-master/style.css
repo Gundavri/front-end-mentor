@@ -338,7 +338,7 @@ body {
     text-align: center;
 } 
 
-#player-choice, #enemy-choice {
+.player-choice, .enemy-choice {
     display: none;
     width: 26%;
 }
@@ -353,23 +353,23 @@ body {
     border-radius: 50%;
 }
 
-#player-underneath {
+.player-underneath {
     margin-top: 1.3vw;
     margin-left: -15%;
 }
 
-#enemy-underneath {
+.enemy-underneath {
     margin-top: 1.3vw;
     margin-left: 15%;
 }
 
 
-#play-again {
+.play-again {
     display: none;
     margin-top: 2%;
 }
 
-#play-again-btn {
+.play-again-btn {
     cursor: pointer;
     background-color: #C8C8C8;
     width: 12vw;
@@ -382,7 +382,7 @@ body {
     color: hsl(310, 76%, 32%);
 }
 
-#play-again-text {
+.play-again-text {
     font-size: 2vw;
     font-weight: 800;
     color: #C8C8C8;
@@ -460,6 +460,7 @@ label:active:after {
 
 .signs-words-bonus {
     display: none;
+    font-size: 1.5vw;
 }
 
 .game-wrapper-choose-bonus {
@@ -520,4 +521,13 @@ label:active:after {
     margin: -5vw 59.7vw;
     transform-origin: left;
     transform: rotate(-67deg);
+}
+
+.player-choice-bonus, .enemy-choice-bonus {
+    display: none;
+    width: 23%;
+}
+
+.enemy-choice-bonus {
+    margin-left: 2.8vw;
 }
