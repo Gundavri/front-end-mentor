@@ -40,6 +40,8 @@ var isTie = false;
 
 var normalMode = true;
 
+var switched = false;
+
 // CONSTANS
 
 const REVEAL_TIME = 0;
@@ -280,10 +282,17 @@ function randomizeAndDraw(sign){
         if(randNum === 1 || randNum === 3) result.res = 1;
         else if(randNum === 2 || randNum === 4) result.res = -1;
         else  result.res = 0;
+        playerChoice[1].childNodes[0].style.transform = 'none';
     }
 
-    if(normalMode) playerChoice[0].childNodes[0].style.display = 'block';
-    else playerChoice[1].childNodes[0].style.display = 'block';
+    if(normalMode) {
+        playerChoice[0].childNodes[0].style.display = 'block';
+        playerChoice[0].childNodes[0].style.transform = 'none';
+    }
+    else {
+        playerChoice[1].childNodes[0].style.display = 'block';
+        playerChoice[1].childNodes[0].style.marginLeft = '4.5vw';
+    }
 
     if(!result.hasOwnProperty('res')) result.err = 'Something went wrong';
 
@@ -322,7 +331,8 @@ function drawEnemy(num){
             enemyChoice[1].appendChild(rockBonus.cloneNode(true));
         }
         enemyChoice[1].childNodes[0].style.display = 'block';
-        enemyChoice[1].childNodes[0].style.transform = 'translate(45%, 0)';
+        enemyChoice[1].childNodes[0].style.margin = '0';
+        enemyChoice[1].childNodes[0].style.transform = 'translate(90%, 0)';
     }
 }
 
@@ -416,7 +426,7 @@ function unmoveUnderneathAndStyle(){
     if(!isTie){
         for(let i=0; i<3; i++){
             if(normalMode) initialRow2[0].removeChild(initialRow2[0].childNodes[initialRow2[0].childNodes.length-1]);
-            else initialRow2[1].removeChild(initialRow2[0].childNodes[initialRow2[0].childNodes.length-1]);
+            else initialRow2[1].removeChild(initialRow2[1].childNodes[initialRow2[1].childNodes.length-1]);
         }
     }
     isTie = false;
@@ -442,7 +452,6 @@ function changeToNormalMode() {
     // open normal modal
     modalImgs[1].setAttribute('style', 'display:none !important');
     modalImgs[0].setAttribute('style', 'display:inline !important');
-    // modalOpenFunc();
     signsWords[1].style.display = 'none';
     signsWords[0].style.display = 'block';
   
@@ -455,11 +464,11 @@ function changeToBonusMode() {
     // open bonus modal
     modalImgs[0].setAttribute('style', 'display:none !important');
     modalImgs[1].setAttribute('style', 'display:inline !important');
-    // modalOpenFunc();
+    if(!switched) modalOpenFunc();
     signsWords[0].style.display = 'none';
     signsWords[1].style.display = 'block';
 
-
+    switched = true;
     gameWrappers[0].style.display = 'none';
     gameWrappers[1].style.display = 'block';
     addEventListenersBonus();
@@ -489,7 +498,7 @@ function signClickedFunc(sign){
     }, REVEAL_TIME);
 }
 
-// modalOpenFunc();
+modalOpenFunc();
 addEventListeners();
 // changeToBonusMode();
 // removeEventListeners();
