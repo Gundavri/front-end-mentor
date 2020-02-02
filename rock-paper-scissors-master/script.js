@@ -79,12 +79,12 @@ var playerChoiceMiddleTransformNormal = 'translateX(0)';
 var enemyChoiceMiddleTransformNormal = 'translateX(4.5vw)';
 var playerChoiceMiddleTransformBonus = 'translateX(0)';
 var enemyChoiceMiddleTransformBonus = 'translateX(9vw)';
-
+var playAgainTransform = 'translateX(0, 55vw)';
 
 
 // CONSTANS
 
-const REVEAL_TIME = 1000;
+const REVEAL_TIME = 800;
 
 
 //  Modal Functions
@@ -200,6 +200,7 @@ function resizeCallback(event) {
         enemyChoiceMiddleTransformNormal = 'translateX(4.5vw)';
         playerChoiceMiddleTransformBonus = 'translateX(0)';
         enemyChoiceMiddleTransformBonus = 'translateX(9vw)';
+        playAgainTransform = 'translate(0, 0)';
     }
     //  Mobile version
     else {
@@ -236,6 +237,7 @@ function resizeCallback(event) {
         enemyChoiceMiddleTransformNormal = 'translateX(-17.8vw)';
         playerChoiceMiddleTransformBonus = 'translateX(15vw)';
         enemyChoiceMiddleTransformBonus = 'translateX(0)';
+        playAgainTransform = 'translate(-8.2vw, 55vw)';
     }
 }
 
@@ -465,6 +467,7 @@ function drawMiddle(txt) {
         enemyChoice[0].childNodes[0].style.transform = enemyChoiceMiddleTransformNormal;
     } else {
         playAgain[1].style.display = 'block';
+        playAgain[1].style.transform = playAgainTransform;
         playAgainText[1].innerText = txt;
         playerChoice[1].childNodes[0].style.transform = playerChoiceMiddleTransformBonus;
         enemyChoice[1].childNodes[0].style.transform = enemyChoiceMiddleTransformBonus;
