@@ -42,9 +42,49 @@ var normalMode = true;
 
 var switched = false;
 
+//  Variables for responsive layout
+
+var playerChoiceTransform = 'translate(0, 0)';
+var playerChoiceMarginLeft = '4.5vw';
+var enemyChoiceTransformNormal = 'translate(45%, 0)';
+var enemyChoiceMargin = '0';
+var enemyChoiceTransformBonus = 'translate(90%, 0)';
+var tempUnderneathsStyles = [
+    {
+        backgroundColor: 'rgba(255, 255, 255, 0.01)',
+        zIndex: '-4',
+        width: '30vw',
+        height:'30vw',
+        transformWin: 'translate(-21.8vw, -10vw)',
+        transformLose: 'translate(22.2vw, -10vw)'
+    },
+    {
+        backgroundColor: 'rgba(255, 255, 255, 0.03)',
+        zIndex: '-3',
+        width: '25vw',
+        height:'25vw',
+        transformWin: 'translate(-21.8vw, -7.5vw)',
+        transformLose: 'translate(22.2vw, -7.5vw)'
+    },
+    {
+        backgroundColor: 'rgba(255, 255, 255, 0.06)',
+        zIndex: '-2',
+        width: '20vw',
+        height: '20vw',
+        transformWin: 'translate(-21.8vw, -5vw)',
+        transformLose: 'translate(22.2vw, -5vw)'
+    }
+];
+var playerChoiceMiddleTransformNormal = 'translateX(0)';
+var enemyChoiceMiddleTransformNormal = 'translateX(4.5vw)';
+var playerChoiceMiddleTransformBonus = 'translateX(0)';
+var enemyChoiceMiddleTransformBonus = 'translateX(9vw)';
+
+
+
 // CONSTANS
 
-const REVEAL_TIME = 0;
+const REVEAL_TIME = 1000;
 
 
 //  Modal Functions
@@ -124,6 +164,80 @@ function modeSwitchCallback(event) {
     }
 }
 
+function resizeCallback(event) {
+    //  Desktop Version
+    if(window.innerWidth > 769) {
+        playerChoiceTransform = 'translate(0, 0)';
+        enemyChoiceTransformNormal = 'translate(45%, 0)';
+        enemyChoiceTransformBonus = 'translate(90%, 0)';
+        tempUnderneathsStyles = [
+            {
+                backgroundColor: 'rgba(255, 255, 255, 0.01)',
+                zIndex: '-4',
+                width: '30vw',
+                height:'30vw',
+                transformWin: 'translate(-21.8vw, -10vw)',
+                transformLose: 'translate(22.2vw, -10vw)'
+            },
+            {
+                backgroundColor: 'rgba(255, 255, 255, 0.03)',
+                zIndex: '-3',
+                width: '25vw',
+                height:'25vw',
+                transformWin: 'translate(-21.8vw, -7.5vw)',
+                transformLose: 'translate(22.2vw, -7.5vw)'
+            },
+            {
+                backgroundColor: 'rgba(255, 255, 255, 0.06)',
+                zIndex: '-2',
+                width: '20vw',
+                height: '20vw',
+                transformWin: 'translate(-21.8vw, -5vw)',
+                transformLose: 'translate(22.2vw, -5vw)'
+            }
+        ];
+        playerChoiceMiddleTransformNormal = 'translateX(0)';
+        enemyChoiceMiddleTransformNormal = 'translateX(4.5vw)';
+        playerChoiceMiddleTransformBonus = 'translateX(0)';
+        enemyChoiceMiddleTransformBonus = 'translateX(9vw)';
+    }
+    //  Mobile version
+    else {
+        playerChoiceTransform = 'translate(-7vw, 0)';
+        enemyChoiceTransformNormal = 'translate(-16%, 0)';
+        enemyChoiceTransformBonus = 'translate(90%, 0)';
+        tempUnderneathsStyles = [
+            {
+                backgroundColor: 'rgba(255, 255, 255, 0.01)',
+                zIndex: '-4',
+                width: '50vw',
+                height:'50vw',
+                transformWin: 'translate(-21.8vw, -17.5vw)',
+                transformLose: 'translate(22.2vw, -17.5vw)'
+            },
+            {
+                backgroundColor: 'rgba(255, 255, 255, 0.03)',
+                zIndex: '-3',
+                width: '42vw',
+                height:'42vw',
+                transformWin: 'translate(-21.8vw, -13.8vw)',
+                transformLose: 'translate(22.2vw, -13.8vw)'
+            },
+            {
+                backgroundColor: 'rgba(255, 255, 255, 0.06)',
+                zIndex: '-2',
+                width: '35vw',
+                height: '35vw',
+                transformWin: 'translate(-21.8vw, -10vw)',
+                transformLose: 'translate(22.2vw, -10vw)'
+            }
+        ];
+        playerChoiceMiddleTransformNormal = 'translateX(8.2vw)';
+        enemyChoiceMiddleTransformNormal = 'translateX(-17.8vw)';
+        playerChoiceMiddleTransformBonus = 'translateX(15vw)';
+        enemyChoiceMiddleTransformBonus = 'translateX(0)';
+    }
+}
 
 
 // Logic
@@ -287,11 +401,11 @@ function randomizeAndDraw(sign){
 
     if(normalMode) {
         playerChoice[0].childNodes[0].style.display = 'block';
-        playerChoice[0].childNodes[0].style.transform = 'none';
+        playerChoice[0].childNodes[0].style.transform = playerChoiceTransform;
     }
     else {
         playerChoice[1].childNodes[0].style.display = 'block';
-        playerChoice[1].childNodes[0].style.marginLeft = '4.5vw';
+        playerChoice[1].childNodes[0].style.marginLeft = playerChoiceMarginLeft;
     }
 
     if(!result.hasOwnProperty('res')) result.err = 'Something went wrong';
@@ -317,7 +431,7 @@ function drawEnemy(num){
             enemyChoice[0].appendChild(rock.cloneNode(true));
         }
         enemyChoice[0].childNodes[0].style.display = 'block';
-        enemyChoice[0].childNodes[0].style.transform = 'translate(45%, 0)';
+        enemyChoice[0].childNodes[0].style.transform = enemyChoiceTransformNormal;
     } else {
         if(num === 0) {
             enemyChoice[1].appendChild(scissorsBonus.cloneNode(true));
@@ -331,8 +445,8 @@ function drawEnemy(num){
             enemyChoice[1].appendChild(rockBonus.cloneNode(true));
         }
         enemyChoice[1].childNodes[0].style.display = 'block';
-        enemyChoice[1].childNodes[0].style.margin = '0';
-        enemyChoice[1].childNodes[0].style.transform = 'translate(90%, 0)';
+        enemyChoice[1].childNodes[0].style.margin = enemyChoiceMargin;
+        enemyChoice[1].childNodes[0].style.transform = enemyChoiceTransformBonus;
     }
 }
 
@@ -347,9 +461,13 @@ function drawMiddle(txt) {
     if(normalMode) {
         playAgain[0].style.display = 'block';
         playAgainText[0].innerText = txt;
+        playerChoice[0].childNodes[0].style.transform = playerChoiceMiddleTransformNormal;
+        enemyChoice[0].childNodes[0].style.transform = enemyChoiceMiddleTransformNormal;
     } else {
         playAgain[1].style.display = 'block';
         playAgainText[1].innerText = txt;
+        playerChoice[1].childNodes[0].style.transform = playerChoiceMiddleTransformBonus;
+        enemyChoice[1].childNodes[0].style.transform = enemyChoiceMiddleTransformBonus;
     }
 }
 
@@ -392,32 +510,13 @@ function moveUnderneathAndStyle(res) {
         tempUnderneaths.push(document.createElement('div'));
         tempUnderneaths[i].style.position = 'absolute';
         tempUnderneaths[i].style.borderRadius = '50%';
+        tempUnderneaths[i].style.backgroundColor = tempUnderneathsStyles[i].backgroundColor;
+        tempUnderneaths[i].style.zIndex = tempUnderneathsStyles[i].zIndex;
+        tempUnderneaths[i].style.width = tempUnderneathsStyles[i].width;
+        tempUnderneaths[i].style.height = tempUnderneathsStyles[i].height;
+        tempUnderneaths[i].style.transform = res === 1 ? tempUnderneathsStyles[i].transformWin : tempUnderneathsStyles[i].transformLose;
         if(normalMode) initialRow2[0].appendChild(tempUnderneaths[i]);
         else initialRow2[1].appendChild(tempUnderneaths[i]);
-    }
-
-
-    tempUnderneaths[0].style.backgroundColor = 'rgba(255, 255, 255, 0.01)';
-    tempUnderneaths[0].style.zIndex = '-4';
-    tempUnderneaths[0].style.width = '30vw';
-    tempUnderneaths[0].style.height = '30vw';
-    tempUnderneaths[1].style.backgroundColor = 'rgba(255, 255, 255, 0.03)';
-    tempUnderneaths[1].style.zIndex = '-3';
-    tempUnderneaths[1].style.width = '25vw';
-    tempUnderneaths[1].style.height = '25vw';
-    tempUnderneaths[2].style.backgroundColor = 'rgba(255, 255, 255, 0.06)';
-    tempUnderneaths[2].style.zIndex = '-2';
-    tempUnderneaths[2].style.width = '20vw';
-    tempUnderneaths[2].style.height = '20vw';
-
-    if(res === 1) {
-        tempUnderneaths[0].style.transform = 'translate(-21.8vw, -10vw)';
-        tempUnderneaths[1].style.transform = 'translate(-21.8vw, -7.5vw)';
-        tempUnderneaths[2].style.transform = 'translate(-21.8vw, -5vw)';
-    } else if(res === -1) {
-        tempUnderneaths[0].style.transform = 'translate(22.2vw, -10vw)';
-        tempUnderneaths[1].style.transform = 'translate(22.2vw, -7.5vw)';
-        tempUnderneaths[2].style.transform = 'translate(22.2vw, -5vw)';
     }
 }
 
@@ -434,17 +533,15 @@ function unmoveUnderneathAndStyle(){
 
 
 function moveSelectedText() {
-    textDivs[0].style.width = '44%';
-    textDivs[1].style.width = '44%';
-    textDivs[2].style.width = '44%';
-    textDivs[3].style.width = '44%';
+    for(let i=0; i<4; i++){
+        textDivs[i].style.width = '44%';
+    }
 }
 
 function unmoveSelectedText() {
-    textDivs[0].style.width = '30%';
-    textDivs[1].style.width = '30%';
-    textDivs[2].style.width = '30%';
-    textDivs[3].style.width = '30%';
+    for(let i=0; i<4; i++){
+        textDivs[i].style.width = '30%';
+    }
 }
 
 
@@ -498,6 +595,7 @@ function signClickedFunc(sign){
     }, REVEAL_TIME);
 }
 
+resizeCallback();
 modalOpenFunc();
 addEventListeners();
 // changeToBonusMode();
@@ -524,3 +622,4 @@ playAgainBtn[1].addEventListener('click', playAgainCallback)
 
 toggleSwitch.addEventListener('change', modeSwitchCallback);
 
+window.addEventListener('resize', resizeCallback);
