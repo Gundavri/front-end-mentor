@@ -386,7 +386,7 @@ function randomizeAndDraw(sign){
     } else if(sign === 'lizardBonus') {
         playerChoice[1].appendChild(lizardBonus.cloneNode(true));
         if(randNum === 1 || randNum === 4) result.res = 1;
-        else if(randNum === 3 || randNum === 0) result.res = -1;
+        else if(randNum === 2 || randNum === 0) result.res = -1;
         else  result.res = 0;
     } else if(sign === 'spockBonus') {
         playerChoice[1].appendChild(spockBonus.cloneNode(true));
